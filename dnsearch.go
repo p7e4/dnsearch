@@ -36,26 +36,34 @@ func main() {
 
     app.Get("/", func(ctx iris.Context) {
         domain := strings.ReplaceAll(Reverse(strings.ToLower(ctx.URLParam("domain"))), ".", "\\.")
-        ip := ctx.URLParam("ip")
-
-        if domain[len(domain)-1:] != "." {
-            domain = domain + "\\."
-        }
+        ip := Reverse(ctx.URLParam("ip"))
 
         var data []interface{}
-        
-        opts := options.Distinct()
 
         if len(domain) > 0 {
+            if domain[len(domain)-1:] != "." {
+                domain = domain + "\\."
+            }
+            opts := options.Distinct()
+
             values, _ := collection.Distinct(context.TODO(), "domain", bson.D{{"domain", bson.M{"$regex": "^" + domain}}}, opts)
             for _, value := range values {
                 data = append(data, Reverse(value))
             }
 
         } else if len(ip) > 0 {
-            values, _ := collection.Distinct(context.TODO(), "ip", bson.D{{"ip", ip}}, opts)
+            cursor, err := collection.Find(context.TODO(), bson.D{{"ip", ip}})
+            if err != nil {
+                log.Fatal(err)
+            }
+
+            var values []bson.M
+            if err = cursor.All(context.TODO(), &values); err != nil {
+                log.Fatal(err)
+            }
+
             for _, value := range values {
-                data = append(data, Reverse(value))
+                data = append(data, Reverse(value["domain"]))
             }
 
         } else {
