@@ -1,6 +1,10 @@
 # dnsearch
 using rapid7 open data search subdomain and reverse ip
 
+## build data(Unverified)
+`bash build.sh`
+
+
 ## run
 ```
 go env -w GO111MODULE=on
@@ -18,3 +22,6 @@ go run dnsearch.go
 
 `curl http://localhost/?ip=8.8.8.8`
 
+
+## ref
+https://p7e4.js.org/2021/04/05/using-rapid7-opendata/
