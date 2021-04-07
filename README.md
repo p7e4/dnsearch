@@ -15,7 +15,7 @@ go run dnsearch.go
 
 ## search subdomains
 
-`curl http://localhost/?q=baidu.com`
+`curl http://localhost/?domain=baidu.com`
 
 
 ## reverse ip
