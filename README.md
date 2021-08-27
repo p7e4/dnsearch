@@ -1,5 +1,5 @@
 # dnsearch
-using rapid7 open data search subdomain and reverse ip
+using rapid7 open dns data search subdomain and reverse ip
 
 ## build data
 `bash build.sh`
@@ -25,3 +25,4 @@ go run dnsearch.go
 
 ## ref
 https://p7e4.js.org/2021/04/05/using-rapid7-opendata/
+https://opendata.rapid7.com/
