@@ -28,6 +28,5 @@ go run dnsearch.go
 
 ## ref
 
-https://p7e4.js.org/2021/04/05/using-rapid7-opendata/
-
-https://opendata.rapid7.com/
+- https://p7e4.js.org/2021/04/05/using-rapid7-opendata/
+- https://opendata.rapid7.com/
