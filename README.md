@@ -1,11 +1,14 @@
 # dnsearch
+
 using rapid7 open dns data search subdomain and reverse ip
 
 ## build data
+
 `bash build.sh`
 
 
 ## run
+
 ```
 go env -w GO111MODULE=on
 go env -w GOPROXY=https://goproxy.cn,https://gocenter.io,https://goproxy.io,direct
@@ -24,5 +27,7 @@ go run dnsearch.go
 
 
 ## ref
+
 https://p7e4.js.org/2021/04/05/using-rapid7-opendata/
+
 https://opendata.rapid7.com/
