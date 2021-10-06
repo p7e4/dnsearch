@@ -2,6 +2,10 @@
 
 using rapid7 open dns data search subdomain and reverse ip
 
+## note
+It is recommended to use https://github.com/Cgboal/SonarSearch
+
+
 ## build data
 
 `bash build.sh`
