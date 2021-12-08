@@ -4,26 +4,22 @@ using rapid7 open dns data search subdomain and reverse ip
 
 ## note
 + It is recommended to use https://github.com/Cgboal/SonarSearch
-+ You need to update the download url in the build.sh first, which can be obtained from https://opendata.rapid7.com/
++ You need to 
 
-## build data
+## using docker(not finished yet!)
 
-`bash build.sh`
+1. `git clone --depth 1 https://github.com/p7e4/dnsearch && cd dnsearch`
 
+2. update the download url in the `build.sh`, which can be obtained from https://opendata.rapid7.com/
 
-## run
+3. `docker build -t dnsearch .`
 
-```
-go env -w GO111MODULE=on
-go env -w GOPROXY=https://goproxy.cn,https://gocenter.io,https://goproxy.io,direct
-go run dnsearch.go
-```
+4. `docker run -d -p 80 dnsearch`
 
 
 ## search subdomains
 
 `curl http://localhost/?domain=baidu.com`
-
 
 ## reverse ip
 
