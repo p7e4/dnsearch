@@ -4,7 +4,6 @@ using rapid7 open dns data search subdomain and reverse ip
 
 ## note
 + It is recommended to use https://github.com/Cgboal/SonarSearch
-+ You need to 
 
 ## using docker(not finished yet!)
 
@@ -16,7 +15,6 @@ using rapid7 open dns data search subdomain and reverse ip
 
 4. `docker run -d -p 80 dnsearch`
 
-
 ## search subdomains
 
 `curl http://localhost/?domain=baidu.com`
@@ -24,7 +22,6 @@ using rapid7 open dns data search subdomain and reverse ip
 ## reverse ip
 
 `curl http://localhost/?ip=8.8.8.8`
-
 
 ## ref
 
