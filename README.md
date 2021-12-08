@@ -3,8 +3,8 @@
 using rapid7 open dns data search subdomain and reverse ip
 
 ## note
-It is recommended to use https://github.com/Cgboal/SonarSearch
-
++ It is recommended to use https://github.com/Cgboal/SonarSearch
++ You need to update the download url in the build.sh first, which can be obtained from https://opendata.rapid7.com/
 
 ## build data
 
@@ -34,3 +34,4 @@ go run dnsearch.go
 
 - https://p7e4.js.org/2021/04/05/using-rapid7-opendata/
 - https://opendata.rapid7.com/
+
