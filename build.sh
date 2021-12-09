@@ -10,7 +10,7 @@ pigz -dc rdns.json.gz | jq -r '"}\"" + .name + "\":\"pi\",\"" + .value + "\":\"n
 
 rm -f rdns.json.gz fdns.json.gz
 
-grep -E '^\{"domain":"[-a-z0-9\.]+","ip":"([0-9]{1,3}\.){3}[0-9]{1,3}"}$' tmp.json | sort | uniq | mongoimport -d dns -c dns
+grep -E '^\{"domain":"[-a-z0-9.]+","ip":"([0-9]{1,3}\.){3}[0-9]{1,3}"}$' tmp.json | sort | uniq | mongoimport -d dns -c dns
 
 rm tmp.json
 
