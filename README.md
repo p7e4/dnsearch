@@ -13,7 +13,7 @@ using rapid7 open dns data search subdomain and reverse ip
 
 3. `docker build -t dnsearch .`
 
-4. `docker run -d -p 80 dnsearch`
+4. `docker run -d -p 80:80 dnsearch`
 
 ## search subdomains
 
