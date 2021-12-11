@@ -1,4 +1,5 @@
 FROM ubuntu
+VOLUME /etc/localtime
 ADD . /root/
 RUN bash /root/build.sh
-ENTRYPOINT ["go", "run", "/root/dnsearch.go"]
+ENTRYPOINT ["bash", "/root/start.sh"]
