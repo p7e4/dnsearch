@@ -14,7 +14,7 @@ using rapid7 open dns data search subdomain and reverse ip
 
 2. update the download url in the `build.sh`, which can be obtained from https://opendata.rapid7.com/
 
-3. ```docker run -d -p 80:80 -v `pwd`/dnsearch:/dnsearch ubuntu bash /dnsearch/build.sh```
+3. ```docker run -d -p 80:80 -v `pwd`/dnsearch:/dnsearch ubuntu bash /dnsearch/build.sh > log.txt```
 
 ## search subdomains
 
