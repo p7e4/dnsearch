@@ -10,13 +10,11 @@ using rapid7 open dns data search subdomain and reverse ip
 
 ## using docker
 
-1. `git clone --depth 1 https://github.com/p7e4/dnsearch && cd dnsearch`
+1. `git clone --depth 1 https://github.com/p7e4/dnsearch`
 
 2. update the download url in the `build.sh`, which can be obtained from https://opendata.rapid7.com/
 
-3. `docker build -t dnsearch .`
-
-4. `docker run -d -p 80:80 dnsearch`
+3. ```docker run -d -p 80:80 -v `pwd`/dnsearch:/dnsearch ubuntu bash /dnsearch/build.sh```
 
 ## search subdomains
 
