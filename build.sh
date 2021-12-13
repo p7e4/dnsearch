@@ -6,8 +6,8 @@ go env -w GO111MODULE=on
 go env -w GOPROXY=https://goproxy.cn,https://gocenter.io,https://goproxy.io,direct
 
 service mongodb start
-echo "start download file"
 
+echo "start download file"
 # update the download url here!
 wget -q -O fdns.json.gz https://opendata.rapid7.com/sonar.fdns_v2/2021-11-26-1637885311-fdns_a.json.gz
 wget -q -O rdns.json.gz https://opendata.rapid7.com/sonar.rdns_v2/2021-11-24-1637712352-rdns.json.gz
@@ -23,7 +23,7 @@ echo "start de-duplication"
 pigz -dc tmp.json.gz | grep -E '^\{"domain":"[-a-z0-9.]+","ip":"([0-9]{1,3}\.){3}[0-9]{1,3}"}$' | sort -u | pigz > result.json.gz
 
 echo "start import to mongodb"
-pigz -dc result.json.gz | mongoimport -d dns -c dns
+pigz -dc result.json.gz | mongoimport -d dns -c dns --quiet
 
 rm tmp.json.gz result.json.gz
 
