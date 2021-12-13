@@ -3,9 +3,12 @@
 using rapid7 open dns data search subdomain and reverse ip
 
 ## note
-+ It is recommended to use https://github.com/Cgboal/SonarSearch
 
-## using docker(not finished yet!)
+- It is recommended to use https://github.com/Cgboal/SonarSearch
+- If you encounter interruption problems with `nohup`, try `screen`
+- This will takes one day on a normal disk(maybe more), make sure you have 400g of free disk space
+
+## using docker
 
 1. `git clone --depth 1 https://github.com/p7e4/dnsearch && cd dnsearch`
 
