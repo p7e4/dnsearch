@@ -6,7 +6,7 @@ using rapid7 open dns data search subdomain and reverse ip
 
 - It is recommended to use https://github.com/Cgboal/SonarSearch
 - If you encounter interruption problems with `nohup`, try `screen`
-- This will takes one day on a normal disk(maybe more), make sure you have 400g of free disk space
+- This will takes one day on a normal disk(maybe more), make sure you have 300g of free disk space
 
 ## using docker
 
