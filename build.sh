@@ -1,5 +1,10 @@
 apt-get update && apt-get upgrade -y
 
+export DEBIAN_FRONTEND=noninteractive
+apt-get install -y tzdata
+ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+dpkg-reconfigure --frontend noninteractive tzdata
+
 apt-get install golang mongodb wget pigz jq -y
 
 go env -w GO111MODULE=on
