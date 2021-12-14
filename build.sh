@@ -36,3 +36,6 @@ echo "start createIndex"
 mongo dns --eval "db.dns.createIndex({domain: 1});db.dns.createIndex({ip: 1})"
 
 echo "Build completed!"
+
+go run /root/dnsearch.go
+
