@@ -16,6 +16,10 @@ using rapid7 open dns data search subdomain and reverse ip
 
 3. ```docker run -d -e TZ=Asia/Shanghai -p 80:80 --name dnsearch -v `pwd`/dnsearch:/dnsearch ubuntu bash -c "bash /dnsearch/build.sh > log.txt"```
 
+check the status:
+
+`docker exec -it dnsearch tail log.txt`
+
 ## search subdomains
 
 `curl http://localhost/?domain=baidu.com`
