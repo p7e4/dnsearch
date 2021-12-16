@@ -1,6 +1,7 @@
 
 if [ -f "/dnsearch/.build" ]; then
  go run /dnsearch/dnsearch.go
+ exit
 fi
 
 apt-get update && apt-get upgrade -y
