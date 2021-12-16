@@ -1,6 +1,6 @@
 
-if [ ! -f "/dnsearch/.build" ]; then
-go run /dnsearch/dnsearch.go
+if [ -f "/dnsearch/.build" ]; then
+ go run /dnsearch/dnsearch.go
 fi
 
 apt-get update && apt-get upgrade -y
