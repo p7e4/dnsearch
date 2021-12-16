@@ -1,3 +1,8 @@
+
+if [ ! -f "/dnsearch/.build" ]; then
+go run /dnsearch/dnsearch.go
+fi
+
 apt-get update && apt-get upgrade -y
 
 export DEBIAN_FRONTEND=noninteractive
@@ -37,5 +42,7 @@ mongo dns --eval "db.dns.createIndex({domain: 1});db.dns.createIndex({ip: 1})"
 
 echo "Build completed!"
 
-go run /root/dnsearch.go
+echo 1 > /dnsearch/.build
+
+go run /dnsearch/dnsearch.go
 
