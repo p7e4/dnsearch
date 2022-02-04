@@ -20,8 +20,8 @@ service mongodb start
 
 echo "start download file"
 # update the download url here!
-wget -q -O fdns.json.gz https://opendata.rapid7.com/sonar.fdns_v2/2021-12-31-1640909088-fdns_a.json.gz
-wget -q -O rdns.json.gz https://opendata.rapid7.com/sonar.rdns_v2/2021-12-29-1640736344-rdns.json.gz
+wget -q -O fdns.json.gz https://opendata.rapid7.com/sonar.fdns_v2/2022-01-28-1643328400-fdns_a.json.gz
+wget -q -O rdns.json.gz https://opendata.rapid7.com/sonar.rdns_v2/2022-01-26-1643155568-rdns.json.gz
 
 echo "start parsing file"
 pigz -dc fdns.json.gz | grep "cname\"" -v | jq -r '"}\"" + .value + "\":\"pi\",\"" + .name + "\":\"niamod\"{"' | tr '[:upper:]' '[:lower:]' | rev | pigz > tmp.json.gz
